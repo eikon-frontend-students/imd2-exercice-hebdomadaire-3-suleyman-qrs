@@ -12,3 +12,100 @@ img,
 video {
   display: block;
 }
+
+/* colors (thank you chatgpt) */
+body {
+  --bg: #ffffff;
+  --text: #222222;
+  --btn-subscribe: #f124f2;
+  --btn-subscribe-shadow: #a819a8;
+  --btn-newsletter: #684bd4;
+  --btn-cart: #00b47e;
+
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin: 40px 0 0 40px;
+  color: var(--text);
+  font-family: "Lato", sans-serif;
+  font-size: 22px;
+}
+
+.subscribe-button {
+  border-radius: 10px;
+  background: var(--btn-subscribe);
+  box-shadow: 0 7px 0 0 var(--btn-subscribe-shadow);
+  display: flex;
+  width: 300px;
+  height: 80px;
+  transform: rotate(-4deg);
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.newsletter-button {
+  border-radius: 35px;
+  background: var(--btn-newsletter);
+  display: flex;
+  width: 320px;
+  height: 70px;
+  transform: rotate(6deg);
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.cart-button {
+  background: var(--btn-cart);
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+  padding: 25px 30px;
+  justify-content: center;
+  align-items: flex-end;
+  width: fit-content;
+  gap: 10px;
+  border: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+}
+
+/* Hover effects for maximum coolness */
+.subscribe-button:focus,
+.newsletter-button:focus,
+.cart-button:focus {
+  outline: 3px solid rgba(0, 0, 0, 0.12);
+  outline-offset: 4px;
+}
+
+.subscribe-button:hover {
+  transform: rotate(-3deg) scale(1.02);
+}
+.newsletter-button:hover {
+  transform: rotate(7deg) scale(1.02);
+}
+.cart-button:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 520px) {
+  body {
+    margin: 20px;
+  }
+  .subscribe-button,
+  .newsletter-button,
+  .cart-button {
+    width: 100%;
+    transform: none;
+  }
+  .subscribe-button,
+  .newsletter-button {
+    height: 64px;
+  }
+}
