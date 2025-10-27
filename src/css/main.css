@@ -91,19 +91,3 @@ button {
 .cart-button:hover {
   transform: translateY(-2px);
 }
-
-@media (max-width: 520px) {
-  body {
-    margin: 20px;
-  }
-  .subscribe-button,
-  .newsletter-button,
-  .cart-button {
-    width: 100%;
-    transform: none;
-  }
-  .subscribe-button,
-  .newsletter-button {
-    height: 64px;
-  }
-}
